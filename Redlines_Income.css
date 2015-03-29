@@ -1,0 +1,66 @@
+/* The Carto CSS code used to make the redlining/income maps is below. */
+
+/* Detroit Map: Set zoom limits to 10 - 14 */
+
+#Detroit_HOLC  {
+  raster-opacity:.02;
+  [zoom = 11] {raster-opacity:.3;}
+  [zoom = 12] {raster-opacity:.8;}
+  [zoom >= 13] {raster-opacity: 1;}
+
+}
+
+#Detroit_Income {
+  line-color:#fff;
+  line-width:0.8;
+  polygon-opacity:1;
+  polygon-fill:#fff;
+  [Income < 10] { polygon-fill:#fff; } 
+  [Income >= 10] { polygon-fill:#b0acac; }
+  [Income >= 23851] { polygon-fill:#252525; }
+
+}
+
+
+/* Cleveland Map: Set zoom limits to 10 - 14 */
+
+#Cleveland_HOLC  {
+  raster-opacity:.04;
+  [zoom = 11] {raster-opacity:.4;}
+  [zoom = 12] {raster-opacity:.8;}
+  [zoom >= 13] {raster-opacity:1;}
+
+}
+
+#Cleveland_Income {
+  line-color:#fff;
+  line-width:0.8;
+  polygon-opacity:1;
+  polygon-fill:#fff;
+  [Income < 10] { polygon-fill:#fff; } 
+  [Income >= 10] { polygon-fill:#b0acac; }
+  [Income >= 23851] { polygon-fill:#252525; }
+
+}
+
+
+/* Chicago Map: Set zoom limits to 10 - 14 */
+
+#Chicago_Income {
+  line-color:#fff;
+  line-width:0.05;
+  polygon-opacity:1;
+  polygon-fill:#fff;
+  [Income < 10] { polygon-fill:#fff; }
+  [Income >= 10] { polygon-fill:#b0acac; }
+  [Income >= 23851] { polygon-fill:#252525; }
+}
+
+#Chicago_HOLC {
+  raster-opacity:.02;
+  [zoom = 11] {raster-opacity:.4;}
+  [zoom = 12] {raster-opacity:.8;}
+  [zoom >= 13] {raster-opacity:1;}
+}
+
+
